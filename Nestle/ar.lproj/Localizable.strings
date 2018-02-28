@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Nestle
+
+  Created by User on 2/27/18.
+  Copyright © 2018 Nestle. All rights reserved.
+*/
+"placeholderUsernameField" = "البريد الإلكتروني";
+"placeholderPasswordField" = "كلمة السر";

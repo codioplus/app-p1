@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE668FF42046D3C9001A557E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE668FF32046D3C9001A557E /* SignupViewController.swift */; };
+		CE6711DF204593A5005B706E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711DE204593A5005B706E /* LoginViewController.swift */; };
+		CE6711E1204594E3005B706E /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711E0204594E3005B706E /* RoundBtn.swift */; };
+		CE6711E3204596BD005B706E /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711E2204596BD005B706E /* RoundView.swift */; };
+		CE6711F22045C4A9005B706E /* TextfieldBorderBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */; };
 		CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE324AE20456F8500167EE6 /* AppDelegate.swift */; };
-		CEE324B120456F8500167EE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE324B020456F8500167EE6 /* ViewController.swift */; };
 		CEE324B420456F8500167EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B220456F8500167EE6 /* Main.storyboard */; };
 		CEE324B620456F8500167EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B520456F8500167EE6 /* Assets.xcassets */; };
 		CEE324B920456F8500167EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B720456F8500167EE6 /* LaunchScreen.storyboard */; };
+		CEE324C620456FEA00167EE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEE324C820456FEA00167EE6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE668FF32046D3C9001A557E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CE6711DE204593A5005B706E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE6711E0204594E3005B706E /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		CE6711E2204596BD005B706E /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		CE6711ED2045A449005B706E /* Gotham-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Black.otf"; sourceTree = "<group>"; };
+		CE6711EE2045A449005B706E /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
+		CE6711EF2045A449005B706E /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		CE6711F02045A449005B706E /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldBorderBottom.swift; sourceTree = "<group>"; };
 		CEE324AB20456F8500167EE6 /* Nestle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nestle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE324AE20456F8500167EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEE324B020456F8500167EE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEE324B320456F8500167EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEE324B520456F8500167EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE324B820456F8500167EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -25,6 +38,8 @@
 		CEE324C020456F9C00167EE6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		CEE324C120456F9C00167EE6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CEE324C320456FB400167EE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CEE324C720456FEA00167EE6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEE324C920456FEC00167EE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +53,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE668FF52046E49A001A557E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CE6711D820459388005B706E /* Mycode */ = {
+			isa = PBXGroup;
+			children = (
+				CE668FF52046E49A001A557E /* extensions */,
+				CE6711E0204594E3005B706E /* RoundBtn.swift */,
+				CE6711E2204596BD005B706E /* RoundView.swift */,
+				CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */,
+			);
+			path = Mycode;
+			sourceTree = "<group>";
+		};
+		CE6711DD204593A5005B706E /* Mother */ = {
+			isa = PBXGroup;
+			children = (
+				CE668FF32046D3C9001A557E /* SignupViewController.swift */,
+				CE6711DE204593A5005B706E /* LoginViewController.swift */,
+			);
+			path = Mother;
+			sourceTree = "<group>";
+		};
+		CE6711EC2045A448005B706E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE6711EF2045A449005B706E /* Gotham-Bold.otf */,
+				CE6711ED2045A449005B706E /* Gotham-Black.otf */,
+				CE6711EE2045A449005B706E /* Gotham-Book.otf */,
+				CE6711F02045A449005B706E /* Gotham-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CEE324A220456F8500167EE6 = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +110,14 @@
 		CEE324AD20456F8500167EE6 /* Nestle */ = {
 			isa = PBXGroup;
 			children = (
+				CE6711DD204593A5005B706E /* Mother */,
+				CE6711D820459388005B706E /* Mycode */,
 				CEE324AE20456F8500167EE6 /* AppDelegate.swift */,
-				CEE324B020456F8500167EE6 /* ViewController.swift */,
 				CEE324B220456F8500167EE6 /* Main.storyboard */,
+				CEE324C820456FEA00167EE6 /* Localizable.strings */,
 				CEE324B520456F8500167EE6 /* Assets.xcassets */,
 				CEE324B720456F8500167EE6 /* LaunchScreen.storyboard */,
+				CE6711EC2045A448005B706E /* Fonts */,
 				CEE324BA20456F8500167EE6 /* Info.plist */,
 			);
 			path = Nestle;
@@ -127,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE324B920456F8500167EE6 /* LaunchScreen.storyboard in Resources */,
+				CEE324C620456FEA00167EE6 /* Localizable.strings in Resources */,
 				CEE324B620456F8500167EE6 /* Assets.xcassets in Resources */,
 				CEE324B420456F8500167EE6 /* Main.storyboard in Resources */,
 			);
@@ -139,7 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE324B120456F8500167EE6 /* ViewController.swift in Sources */,
+				CE668FF42046D3C9001A557E /* SignupViewController.swift in Sources */,
+				CE6711DF204593A5005B706E /* LoginViewController.swift in Sources */,
+				CE6711E3204596BD005B706E /* RoundView.swift in Sources */,
+				CE6711E1204594E3005B706E /* RoundBtn.swift in Sources */,
+				CE6711F22045C4A9005B706E /* TextfieldBorderBottom.swift in Sources */,
 				CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +225,15 @@
 				CEE324C120456F9C00167EE6 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEE324C820456FEA00167EE6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEE324C720456FEA00167EE6 /* ar */,
+				CEE324C920456FEC00167EE6 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -218,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -270,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
