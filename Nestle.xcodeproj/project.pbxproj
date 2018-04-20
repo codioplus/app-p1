@@ -7,19 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE18B48020860DB900C8181D /* ic_date_picker.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47B20860DB800C8181D /* ic_date_picker.png */; };
+		CE18B48120860DB900C8181D /* ic_heart_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47C20860DB800C8181D /* ic_heart_off.png */; };
+		CE18B48220860DB900C8181D /* ic_menu_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47D20860DB800C8181D /* ic_menu_profile.png */; };
+		CE18B48320860DB900C8181D /* ic_star_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47E20860DB900C8181D /* ic_star_filled.png */; };
+		CE18B486208611BE00C8181D /* ic_heart_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B485208611BE00C8181D /* ic_heart_on.png */; };
+		CE18B488208616B800C8181D /* milestone1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B487208616B800C8181D /* milestone1.png */; };
+		CE18B48A2086261500C8181D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18B4892086261500C8181D /* DetailViewController.swift */; };
+		CE22B9BB2080D86C000FB81E /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B9BA2080D86B000FB81E /* DataCollectionViewCell.swift */; };
+		CE2B8A51206CF30600B40EE6 /* MIBlurPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA745AF206CDD1F0076C5AD /* MIBlurPopup.swift */; };
+		CE4EB99D207C9B06007CEBE3 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EB99C207C9B06007CEBE3 /* BorderView.swift */; };
+		CE4EB9A8207C9E30007CEBE3 /* vc_notif_injection.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB99E207C9E2E007CEBE3 /* vc_notif_injection.pdf */; };
+		CE4EB9A9207C9E30007CEBE3 /* vc_menu_favorite.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB99F207C9E2F007CEBE3 /* vc_menu_favorite.pdf */; };
+		CE4EB9AA207C9E30007CEBE3 /* vc_syringe_grey.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A0207C9E2F007CEBE3 /* vc_syringe_grey.pdf */; };
+		CE4EB9AB207C9E30007CEBE3 /* weight@3x_Modified.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A1207C9E2F007CEBE3 /* weight@3x_Modified.pdf */; };
+		CE4EB9AC207C9E30007CEBE3 /* vc_syringe_green.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A2207C9E2F007CEBE3 /* vc_syringe_green.pdf */; };
+		CE4EB9AD207C9E30007CEBE3 /* vc_menu_profile.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A3207C9E2F007CEBE3 /* vc_menu_profile.pdf */; };
+		CE4EB9AE207C9E30007CEBE3 /* vc_menu_shoutout.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A4207C9E2F007CEBE3 /* vc_menu_shoutout.pdf */; };
+		CE4EB9AF207C9E30007CEBE3 /* vc_notif_milestone.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A5207C9E30007CEBE3 /* vc_notif_milestone.pdf */; };
+		CE4EB9B0207C9E30007CEBE3 /* vc_growth_indicator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A6207C9E30007CEBE3 /* vc_growth_indicator.pdf */; };
+		CE4EB9B1207C9E30007CEBE3 /* vc_menu_notification.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB9A7207C9E30007CEBE3 /* vc_menu_notification.pdf */; };
+		CE4EB9B3207CAFB6007CEBE3 /* SelectedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EB9B2207CAFB6007CEBE3 /* SelectedColor.swift */; };
+		CE55EE8320514DD500AA752D /* MotherMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55EE8220514DD500AA752D /* MotherMenuController.swift */; };
+		CE5D480820492FD2003AF5EC /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480720492FD1003AF5EC /* profile_image.png */; };
+		CE5D481020496105003AF5EC /* brain-activities.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480920496101003AF5EC /* brain-activities.png */; };
+		CE5D481120496105003AF5EC /* feeding.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480A20496101003AF5EC /* feeding.png */; };
+		CE5D481220496105003AF5EC /* growth-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480B20496102003AF5EC /* growth-chart.png */; };
+		CE5D481320496105003AF5EC /* milestone.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480C20496103003AF5EC /* milestone.png */; };
+		CE5D481420496105003AF5EC /* parenting.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480D20496104003AF5EC /* parenting.png */; };
+		CE5D481520496105003AF5EC /* vaccination.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480E20496104003AF5EC /* vaccination.png */; };
+		CE5D481620496105003AF5EC /* videos.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5D480F20496105003AF5EC /* videos.png */; };
+		CE5D481820498880003AF5EC /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D48172049887F003AF5EC /* HomeTableViewController.swift */; };
+		CE65E3D32080AD1700AB5021 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE65E3D02080AD1600AB5021 /* 3.png */; };
+		CE65E3D42080AD1700AB5021 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE65E3D12080AD1600AB5021 /* 2.png */; };
+		CE65E3D52080AD1700AB5021 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE65E3D22080AD1700AB5021 /* 1.png */; };
 		CE668FF42046D3C9001A557E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE668FF32046D3C9001A557E /* SignupViewController.swift */; };
 		CE6711DF204593A5005B706E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711DE204593A5005B706E /* LoginViewController.swift */; };
 		CE6711E1204594E3005B706E /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711E0204594E3005B706E /* RoundBtn.swift */; };
 		CE6711E3204596BD005B706E /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711E2204596BD005B706E /* RoundView.swift */; };
 		CE6711F22045C4A9005B706E /* TextfieldBorderBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */; };
+		CE71ADC1207CC56000D90FB4 /* MotherMilestoneUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71ADC0207CC56000D90FB4 /* MotherMilestoneUIViewController.swift */; };
+		CE767D572088860700D7F137 /* KidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D562088860600D7F137 /* KidsTableViewController.swift */; };
+		CE767D5920888DA000D7F137 /* KidsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D5820888DA000D7F137 /* KidsTableViewCell.swift */; };
+		CE767D5B2088B8AB00D7F137 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D5A2088B8AA00D7F137 /* DetailTableViewCell.swift */; };
+		CE767D5D2088D3D600D7F137 /* ScaledHeightImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE767D5C2088D3D600D7F137 /* ScaledHeightImageVIew.swift */; };
+		CE80E1D9208727C80084A7C0 /* AddKidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80E1D8208727C80084A7C0 /* AddKidViewController.swift */; };
+		CE80E1DB20877A490084A7C0 /* no_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CE80E1DA20877A490084A7C0 /* no_profile.png */; };
+		CE80E1DD208787160084A7C0 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = CE80E1DC208787150084A7C0 /* lock.png */; };
+		CE8602F02077722300C27B35 /* burgermenu.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8602EF2077722300C27B35 /* burgermenu.png */; };
+		CE86DB90206CC81D00CA2D1B /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86DB8F206CC81D00CA2D1B /* PopupViewController.swift */; };
+		CE86DB94206CD6FF00CA2D1B /* Pods_Nestle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E326AE84BE85D8D64EA50223 /* Pods_Nestle.framework */; };
+		CEA579272047CDB300B38C93 /* step.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA579292047CDB300B38C93 /* step.png */; };
+		CEA5792B2047CEEA00B38C93 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6711EF2045A449005B706E /* Gotham-Bold.otf */; };
+		CEA5792C2047CEEA00B38C93 /* Gotham-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6711ED2045A449005B706E /* Gotham-Black.otf */; };
+		CEA5792D2047CEEA00B38C93 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6711EE2045A449005B706E /* Gotham-Book.otf */; };
+		CEA5792E2047CEEA00B38C93 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6711F02045A449005B706E /* Gotham-Medium.otf */; };
+		CEA579322047E60300B38C93 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA579312047E60300B38C93 /* RoundImage.swift */; };
+		CEA579362048490200B38C93 /* SignupformTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA579352048490200B38C93 /* SignupformTableView.swift */; };
 		CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE324AE20456F8500167EE6 /* AppDelegate.swift */; };
 		CEE324B420456F8500167EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B220456F8500167EE6 /* Main.storyboard */; };
-		CEE324B620456F8500167EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B520456F8500167EE6 /* Assets.xcassets */; };
+		CEE324B620456F8500167EE6 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B520456F8500167EE6 /* image.xcassets */; };
 		CEE324B920456F8500167EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B720456F8500167EE6 /* LaunchScreen.storyboard */; };
 		CEE324C620456FEA00167EE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEE324C820456FEA00167EE6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B78442DC245481BB1865237 /* Pods-Nestle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nestle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nestle/Pods-Nestle.release.xcconfig"; sourceTree = "<group>"; };
+		85A6307B08C93E8EBEDACC8F /* Pods-Nestle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nestle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nestle/Pods-Nestle.debug.xcconfig"; sourceTree = "<group>"; };
+		CE18B47B20860DB800C8181D /* ic_date_picker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_date_picker.png; sourceTree = "<group>"; };
+		CE18B47C20860DB800C8181D /* ic_heart_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_heart_off.png; sourceTree = "<group>"; };
+		CE18B47D20860DB800C8181D /* ic_menu_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_profile.png; sourceTree = "<group>"; };
+		CE18B47E20860DB900C8181D /* ic_star_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_filled.png; sourceTree = "<group>"; };
+		CE18B485208611BE00C8181D /* ic_heart_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_heart_on.png; sourceTree = "<group>"; };
+		CE18B487208616B800C8181D /* milestone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milestone1.png; sourceTree = "<group>"; };
+		CE18B4892086261500C8181D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CE22B9BA2080D86B000FB81E /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataCollectionViewCell.swift; path = /Users/user/Desktop/nestle/Nestle/Nestle/Mother/DataCollectionViewCell.swift; sourceTree = "<absolute>"; };
+		CE4EB99C207C9B06007CEBE3 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		CE4EB99E207C9E2E007CEBE3 /* vc_notif_injection.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_notif_injection.pdf; path = Nestle/images/pdf/vc_notif_injection.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB99F207C9E2F007CEBE3 /* vc_menu_favorite.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_menu_favorite.pdf; path = Nestle/images/pdf/vc_menu_favorite.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A0207C9E2F007CEBE3 /* vc_syringe_grey.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_syringe_grey.pdf; path = Nestle/images/pdf/vc_syringe_grey.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A1207C9E2F007CEBE3 /* weight@3x_Modified.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "weight@3x_Modified.pdf"; path = "Nestle/images/pdf/weight@3x_Modified.pdf"; sourceTree = SOURCE_ROOT; };
+		CE4EB9A2207C9E2F007CEBE3 /* vc_syringe_green.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_syringe_green.pdf; path = Nestle/images/pdf/vc_syringe_green.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A3207C9E2F007CEBE3 /* vc_menu_profile.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_menu_profile.pdf; path = Nestle/images/pdf/vc_menu_profile.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A4207C9E2F007CEBE3 /* vc_menu_shoutout.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_menu_shoutout.pdf; path = Nestle/images/pdf/vc_menu_shoutout.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A5207C9E30007CEBE3 /* vc_notif_milestone.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_notif_milestone.pdf; path = Nestle/images/pdf/vc_notif_milestone.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A6207C9E30007CEBE3 /* vc_growth_indicator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_growth_indicator.pdf; path = Nestle/images/pdf/vc_growth_indicator.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9A7207C9E30007CEBE3 /* vc_menu_notification.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_menu_notification.pdf; path = Nestle/images/pdf/vc_menu_notification.pdf; sourceTree = SOURCE_ROOT; };
+		CE4EB9B2207CAFB6007CEBE3 /* SelectedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColor.swift; sourceTree = "<group>"; };
+		CE55EE8220514DD500AA752D /* MotherMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherMenuController.swift; sourceTree = "<group>"; };
+		CE5D480720492FD1003AF5EC /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = "<group>"; };
+		CE5D480920496101003AF5EC /* brain-activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brain-activities.png"; sourceTree = "<group>"; };
+		CE5D480A20496101003AF5EC /* feeding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeding.png; sourceTree = "<group>"; };
+		CE5D480B20496102003AF5EC /* growth-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "growth-chart.png"; sourceTree = "<group>"; };
+		CE5D480C20496103003AF5EC /* milestone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milestone.png; sourceTree = "<group>"; };
+		CE5D480D20496104003AF5EC /* parenting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parenting.png; sourceTree = "<group>"; };
+		CE5D480E20496104003AF5EC /* vaccination.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vaccination.png; sourceTree = "<group>"; };
+		CE5D480F20496105003AF5EC /* videos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videos.png; sourceTree = "<group>"; };
+		CE5D48172049887F003AF5EC /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		CE65E3D02080AD1600AB5021 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		CE65E3D12080AD1600AB5021 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		CE65E3D22080AD1700AB5021 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		CE668FF32046D3C9001A557E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE6711DE204593A5005B706E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE6711E0204594E3005B706E /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -29,10 +116,26 @@
 		CE6711EF2045A449005B706E /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		CE6711F02045A449005B706E /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
 		CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldBorderBottom.swift; sourceTree = "<group>"; };
+		CE71ADC0207CC56000D90FB4 /* MotherMilestoneUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherMilestoneUIViewController.swift; sourceTree = "<group>"; };
+		CE767D562088860600D7F137 /* KidsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KidsTableViewController.swift; path = /Users/user/Desktop/nestle/Nestle/Nestle/Mother/KidsTableViewController.swift; sourceTree = "<absolute>"; };
+		CE767D5820888DA000D7F137 /* KidsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsTableViewCell.swift; sourceTree = "<group>"; };
+		CE767D5A2088B8AA00D7F137 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		CE767D5C2088D3D600D7F137 /* ScaledHeightImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageVIew.swift; sourceTree = "<group>"; };
+		CE80E1D8208727C80084A7C0 /* AddKidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKidViewController.swift; sourceTree = "<group>"; };
+		CE80E1DA20877A490084A7C0 /* no_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_profile.png; sourceTree = "<group>"; };
+		CE80E1DC208787150084A7C0 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		CE8602EF2077722300C27B35 /* burgermenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burgermenu.png; sourceTree = "<group>"; };
+		CE86DB8F206CC81D00CA2D1B /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		CE86DB93206CD6DF00CA2D1B /* MIBlurPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MIBlurPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA579282047CDB300B38C93 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/step.png; sourceTree = "<group>"; };
+		CEA5792A2047CDB500B38C93 /* ar */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ar; path = ar.lproj/step.png; sourceTree = "<group>"; };
+		CEA579312047E60300B38C93 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		CEA579352048490200B38C93 /* SignupformTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupformTableView.swift; sourceTree = "<group>"; };
+		CEA745AF206CDD1F0076C5AD /* MIBlurPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBlurPopup.swift; sourceTree = "<group>"; };
 		CEE324AB20456F8500167EE6 /* Nestle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nestle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE324AE20456F8500167EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE324B320456F8500167EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CEE324B520456F8500167EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEE324B520456F8500167EE6 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
 		CEE324B820456F8500167EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE324BA20456F8500167EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE324C020456F9C00167EE6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -40,6 +143,7 @@
 		CEE324C320456FB400167EE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CEE324C720456FEA00167EE6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEE324C920456FEC00167EE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E326AE84BE85D8D64EA50223 /* Pods_Nestle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nestle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,26 +151,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE86DB94206CD6FF00CA2D1B /* Pods_Nestle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE668FF52046E49A001A557E /* extensions */ = {
+		07F28DCAE44A2F973A72D27A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE86DB93206CD6DF00CA2D1B /* MIBlurPopup.framework */,
+				E326AE84BE85D8D64EA50223 /* Pods_Nestle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CFB570CF379DE72011BC959 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85A6307B08C93E8EBEDACC8F /* Pods-Nestle.debug.xcconfig */,
+				7B78442DC245481BB1865237 /* Pods-Nestle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE5CFCDA205131B2008AD351 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = extensions;
+			path = Menu;
 			sourceTree = "<group>";
+		};
+		CE66F7F8207E4F2A001BC249 /* pic */ = {
+			isa = PBXGroup;
+			children = (
+				CE65E3D22080AD1700AB5021 /* 1.png */,
+				CE65E3D12080AD1600AB5021 /* 2.png */,
+				CE65E3D02080AD1600AB5021 /* 3.png */,
+			);
+			path = pic;
+			sourceTree = SOURCE_ROOT;
 		};
 		CE6711D820459388005B706E /* Mycode */ = {
 			isa = PBXGroup;
 			children = (
-				CE668FF52046E49A001A557E /* extensions */,
+				CE767D5C2088D3D600D7F137 /* ScaledHeightImageVIew.swift */,
+				CE4EB99C207C9B06007CEBE3 /* BorderView.swift */,
 				CE6711E0204594E3005B706E /* RoundBtn.swift */,
 				CE6711E2204596BD005B706E /* RoundView.swift */,
 				CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */,
+				CEA579312047E60300B38C93 /* RoundImage.swift */,
+				CE4EB9B2207CAFB6007CEBE3 /* SelectedColor.swift */,
 			);
 			path = Mycode;
 			sourceTree = "<group>";
@@ -74,8 +210,19 @@
 		CE6711DD204593A5005B706E /* Mother */ = {
 			isa = PBXGroup;
 			children = (
+				CE767D5820888DA000D7F137 /* KidsTableViewCell.swift */,
+				CE767D562088860600D7F137 /* KidsTableViewController.swift */,
+				CE18B4892086261500C8181D /* DetailViewController.swift */,
+				CE767D5A2088B8AA00D7F137 /* DetailTableViewCell.swift */,
+				CE22B9BA2080D86B000FB81E /* DataCollectionViewCell.swift */,
+				CE55EE8220514DD500AA752D /* MotherMenuController.swift */,
 				CE668FF32046D3C9001A557E /* SignupViewController.swift */,
 				CE6711DE204593A5005B706E /* LoginViewController.swift */,
+				CEA579352048490200B38C93 /* SignupformTableView.swift */,
+				CE5D48172049887F003AF5EC /* HomeTableViewController.swift */,
+				CE86DB8F206CC81D00CA2D1B /* PopupViewController.swift */,
+				CE71ADC0207CC56000D90FB4 /* MotherMilestoneUIViewController.swift */,
+				CE80E1D8208727C80084A7C0 /* AddKidViewController.swift */,
 			);
 			path = Mother;
 			sourceTree = "<group>";
@@ -91,11 +238,66 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		CE8602F1207783E200C27B35 /* pdf */ = {
+			isa = PBXGroup;
+			children = (
+				CE4EB9A6207C9E30007CEBE3 /* vc_growth_indicator.pdf */,
+				CE4EB99F207C9E2F007CEBE3 /* vc_menu_favorite.pdf */,
+				CE4EB9A7207C9E30007CEBE3 /* vc_menu_notification.pdf */,
+				CE4EB9A3207C9E2F007CEBE3 /* vc_menu_profile.pdf */,
+				CE4EB9A4207C9E2F007CEBE3 /* vc_menu_shoutout.pdf */,
+				CE4EB99E207C9E2E007CEBE3 /* vc_notif_injection.pdf */,
+				CE4EB9A5207C9E30007CEBE3 /* vc_notif_milestone.pdf */,
+				CE4EB9A2207C9E2F007CEBE3 /* vc_syringe_green.pdf */,
+				CE4EB9A0207C9E2F007CEBE3 /* vc_syringe_grey.pdf */,
+				CE4EB9A1207C9E2F007CEBE3 /* weight@3x_Modified.pdf */,
+			);
+			name = pdf;
+			path = "../../../../../../../Volumes/NO NAME/pdf";
+			sourceTree = "<group>";
+		};
+		CEA579242047CC5F00B38C93 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CE80E1DC208787150084A7C0 /* lock.png */,
+				CE80E1DA20877A490084A7C0 /* no_profile.png */,
+				CE18B487208616B800C8181D /* milestone1.png */,
+				CE18B485208611BE00C8181D /* ic_heart_on.png */,
+				CE18B47B20860DB800C8181D /* ic_date_picker.png */,
+				CE18B47C20860DB800C8181D /* ic_heart_off.png */,
+				CE18B47D20860DB800C8181D /* ic_menu_profile.png */,
+				CE18B47E20860DB900C8181D /* ic_star_filled.png */,
+				CE8602F1207783E200C27B35 /* pdf */,
+				CE8602EF2077722300C27B35 /* burgermenu.png */,
+				CE5D480920496101003AF5EC /* brain-activities.png */,
+				CE5D480A20496101003AF5EC /* feeding.png */,
+				CE5D480B20496102003AF5EC /* growth-chart.png */,
+				CE5D480C20496103003AF5EC /* milestone.png */,
+				CE5D480D20496104003AF5EC /* parenting.png */,
+				CE5D480E20496104003AF5EC /* vaccination.png */,
+				CE5D480F20496105003AF5EC /* videos.png */,
+				CE5D480720492FD1003AF5EC /* profile_image.png */,
+				CEA579292047CDB300B38C93 /* step.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		CEA745AE206CDD1F0076C5AD /* MIBlurPopup */ = {
+			isa = PBXGroup;
+			children = (
+				CEA745AF206CDD1F0076C5AD /* MIBlurPopup.swift */,
+			);
+			name = MIBlurPopup;
+			path = "../../../MIBlurPopup-master/MIBlurPopup";
+			sourceTree = "<group>";
+		};
 		CEE324A220456F8500167EE6 = {
 			isa = PBXGroup;
 			children = (
 				CEE324AD20456F8500167EE6 /* Nestle */,
 				CEE324AC20456F8500167EE6 /* Products */,
+				9CFB570CF379DE72011BC959 /* Pods */,
+				07F28DCAE44A2F973A72D27A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,12 +312,16 @@
 		CEE324AD20456F8500167EE6 /* Nestle */ = {
 			isa = PBXGroup;
 			children = (
+				CE66F7F8207E4F2A001BC249 /* pic */,
+				CEA745AE206CDD1F0076C5AD /* MIBlurPopup */,
+				CE5CFCDA205131B2008AD351 /* Menu */,
+				CEA579242047CC5F00B38C93 /* images */,
 				CE6711DD204593A5005B706E /* Mother */,
 				CE6711D820459388005B706E /* Mycode */,
 				CEE324AE20456F8500167EE6 /* AppDelegate.swift */,
 				CEE324B220456F8500167EE6 /* Main.storyboard */,
 				CEE324C820456FEA00167EE6 /* Localizable.strings */,
-				CEE324B520456F8500167EE6 /* Assets.xcassets */,
+				CEE324B520456F8500167EE6 /* image.xcassets */,
 				CEE324B720456F8500167EE6 /* LaunchScreen.storyboard */,
 				CE6711EC2045A448005B706E /* Fonts */,
 				CEE324BA20456F8500167EE6 /* Info.plist */,
@@ -130,9 +336,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE324BD20456F8500167EE6 /* Build configuration list for PBXNativeTarget "Nestle" */;
 			buildPhases = (
+				04CFB7B97789B00FC257876C /* [CP] Check Pods Manifest.lock */,
 				CEE324A720456F8500167EE6 /* Sources */,
 				CEE324A820456F8500167EE6 /* Frameworks */,
 				CEE324A920456F8500167EE6 /* Resources */,
+				544BDA15A125659C5A020AE6 /* [CP] Embed Pods Frameworks */,
+				1A9BDFC61AB01443955A55B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,6 +375,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = CEE324A220456F8500167EE6;
 			productRefGroup = CEE324AC20456F8500167EE6 /* Products */;
@@ -182,32 +392,153 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA5792E2047CEEA00B38C93 /* Gotham-Medium.otf in Resources */,
+				CE8602F02077722300C27B35 /* burgermenu.png in Resources */,
+				CE80E1DB20877A490084A7C0 /* no_profile.png in Resources */,
+				CE5D481520496105003AF5EC /* vaccination.png in Resources */,
+				CE5D480820492FD2003AF5EC /* profile_image.png in Resources */,
+				CEA5792B2047CEEA00B38C93 /* Gotham-Bold.otf in Resources */,
+				CE4EB9AC207C9E30007CEBE3 /* vc_syringe_green.pdf in Resources */,
+				CE4EB9AE207C9E30007CEBE3 /* vc_menu_shoutout.pdf in Resources */,
+				CE4EB9AA207C9E30007CEBE3 /* vc_syringe_grey.pdf in Resources */,
+				CE4EB9A8207C9E30007CEBE3 /* vc_notif_injection.pdf in Resources */,
+				CE4EB9B0207C9E30007CEBE3 /* vc_growth_indicator.pdf in Resources */,
+				CE4EB9A9207C9E30007CEBE3 /* vc_menu_favorite.pdf in Resources */,
+				CE18B48020860DB900C8181D /* ic_date_picker.png in Resources */,
+				CE65E3D32080AD1700AB5021 /* 3.png in Resources */,
+				CE80E1DD208787160084A7C0 /* lock.png in Resources */,
+				CE65E3D42080AD1700AB5021 /* 2.png in Resources */,
+				CE5D481620496105003AF5EC /* videos.png in Resources */,
+				CE4EB9AF207C9E30007CEBE3 /* vc_notif_milestone.pdf in Resources */,
+				CE18B48320860DB900C8181D /* ic_star_filled.png in Resources */,
+				CE4EB9AD207C9E30007CEBE3 /* vc_menu_profile.pdf in Resources */,
+				CEA5792C2047CEEA00B38C93 /* Gotham-Black.otf in Resources */,
 				CEE324B920456F8500167EE6 /* LaunchScreen.storyboard in Resources */,
+				CE18B48120860DB900C8181D /* ic_heart_off.png in Resources */,
+				CE4EB9AB207C9E30007CEBE3 /* weight@3x_Modified.pdf in Resources */,
 				CEE324C620456FEA00167EE6 /* Localizable.strings in Resources */,
-				CEE324B620456F8500167EE6 /* Assets.xcassets in Resources */,
+				CE5D481320496105003AF5EC /* milestone.png in Resources */,
+				CEE324B620456F8500167EE6 /* image.xcassets in Resources */,
+				CE5D481220496105003AF5EC /* growth-chart.png in Resources */,
 				CEE324B420456F8500167EE6 /* Main.storyboard in Resources */,
+				CE5D481120496105003AF5EC /* feeding.png in Resources */,
+				CE5D481020496105003AF5EC /* brain-activities.png in Resources */,
+				CE18B486208611BE00C8181D /* ic_heart_on.png in Resources */,
+				CE18B488208616B800C8181D /* milestone1.png in Resources */,
+				CE4EB9B1207C9E30007CEBE3 /* vc_menu_notification.pdf in Resources */,
+				CEA5792D2047CEEA00B38C93 /* Gotham-Book.otf in Resources */,
+				CE5D481420496105003AF5EC /* parenting.png in Resources */,
+				CEA579272047CDB300B38C93 /* step.png in Resources */,
+				CE18B48220860DB900C8181D /* ic_menu_profile.png in Resources */,
+				CE65E3D52080AD1700AB5021 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04CFB7B97789B00FC257876C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nestle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A9BDFC61AB01443955A55B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nestle/Pods-Nestle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		544BDA15A125659C5A020AE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nestle/Pods-Nestle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nestle/Pods-Nestle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEE324A720456F8500167EE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2B8A51206CF30600B40EE6 /* MIBlurPopup.swift in Sources */,
+				CE18B48A2086261500C8181D /* DetailViewController.swift in Sources */,
+				CE86DB90206CC81D00CA2D1B /* PopupViewController.swift in Sources */,
+				CE767D5D2088D3D600D7F137 /* ScaledHeightImageVIew.swift in Sources */,
+				CE71ADC1207CC56000D90FB4 /* MotherMilestoneUIViewController.swift in Sources */,
 				CE668FF42046D3C9001A557E /* SignupViewController.swift in Sources */,
+				CEA579362048490200B38C93 /* SignupformTableView.swift in Sources */,
 				CE6711DF204593A5005B706E /* LoginViewController.swift in Sources */,
+				CE80E1D9208727C80084A7C0 /* AddKidViewController.swift in Sources */,
+				CE767D5920888DA000D7F137 /* KidsTableViewCell.swift in Sources */,
+				CE767D5B2088B8AB00D7F137 /* DetailTableViewCell.swift in Sources */,
+				CE4EB99D207C9B06007CEBE3 /* BorderView.swift in Sources */,
 				CE6711E3204596BD005B706E /* RoundView.swift in Sources */,
 				CE6711E1204594E3005B706E /* RoundBtn.swift in Sources */,
 				CE6711F22045C4A9005B706E /* TextfieldBorderBottom.swift in Sources */,
+				CE5D481820498880003AF5EC /* HomeTableViewController.swift in Sources */,
+				CE4EB9B3207CAFB6007CEBE3 /* SelectedColor.swift in Sources */,
+				CEA579322047E60300B38C93 /* RoundImage.swift in Sources */,
 				CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */,
+				CE22B9BB2080D86C000FB81E /* DataCollectionViewCell.swift in Sources */,
+				CE55EE8320514DD500AA752D /* MotherMenuController.swift in Sources */,
+				CE767D572088860700D7F137 /* KidsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CEA579292047CDB300B38C93 /* step.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA579282047CDB300B38C93 /* en */,
+				CEA5792A2047CDB500B38C93 /* ar */,
+			);
+			name = step.png;
+			path = ../../../pic_design;
+			sourceTree = "<group>";
+		};
 		CEE324B220456F8500167EE6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -350,6 +681,7 @@
 		};
 		CEE324BE20456F8500167EE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A6307B08C93E8EBEDACC8F /* Pods-Nestle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +697,7 @@
 		};
 		CEE324BF20456F8500167EE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B78442DC245481BB1865237 /* Pods-Nestle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
