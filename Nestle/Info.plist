@@ -43,5 +43,9 @@
 	<array>
 		<string>Gotham-Medium.otf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Necessary to use camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Necessary to use photo library</string>
 </dict>
 </plist>

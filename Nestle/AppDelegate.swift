@@ -1,4 +1,4 @@
-//
+  //
 //  AppDelegate.swift
 //  Nestle
 //
@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Set navigation bar tint / background colour
+        
+        
+    //    UINavigationBar.appearance().barTintColor = UIColor.blue
+    
+        // Set Navigation bar Title colour
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        let BarButtonItemAppearance = UIBarButtonItem.appearance()
+        BarButtonItemAppearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .normal)
+        // Set navigation bar ItemButton tint colour
+        //UIBarButtonItem.appearance().tintColor = UIColor.yellow
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white , NSAttributedStringKey.font: UIFont(name: "Gotham", size: 17)!]
+        // Set Navigation bar background image
+        let navBgImage:UIImage = UIImage(named: "navbar.png")!
+        UINavigationBar.appearance().setBackgroundImage(navBgImage, for: .default)
+        
+        //Set navigation bar Back button tint colour
+        UINavigationBar.appearance().tintColor = UIColor.white
         return true
     }
 
