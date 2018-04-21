@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1292482089CBBA00F3EDF0 /* RatingPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1292472089CBBA00F3EDF0 /* RatingPopupViewController.swift */; };
+		CE12924A2089DB1C00F3EDF0 /* UIProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1292492089DB1B00F3EDF0 /* UIProgressView.swift */; };
 		CE18B48020860DB900C8181D /* ic_date_picker.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47B20860DB800C8181D /* ic_date_picker.png */; };
 		CE18B48120860DB900C8181D /* ic_heart_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47C20860DB800C8181D /* ic_heart_off.png */; };
 		CE18B48220860DB900C8181D /* ic_menu_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47D20860DB800C8181D /* ic_menu_profile.png */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		7B78442DC245481BB1865237 /* Pods-Nestle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nestle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nestle/Pods-Nestle.release.xcconfig"; sourceTree = "<group>"; };
 		85A6307B08C93E8EBEDACC8F /* Pods-Nestle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nestle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nestle/Pods-Nestle.debug.xcconfig"; sourceTree = "<group>"; };
+		CE1292472089CBBA00F3EDF0 /* RatingPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPopupViewController.swift; sourceTree = "<group>"; };
+		CE1292492089DB1B00F3EDF0 /* UIProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIProgressView.swift; path = /Users/user/Desktop/nestle/Nestle/Nestle/Mycode/UIProgressView.swift; sourceTree = "<absolute>"; };
 		CE18B47B20860DB800C8181D /* ic_date_picker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_date_picker.png; sourceTree = "<group>"; };
 		CE18B47C20860DB800C8181D /* ic_heart_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_heart_off.png; sourceTree = "<group>"; };
 		CE18B47D20860DB800C8181D /* ic_menu_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_profile.png; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		CE6711D820459388005B706E /* Mycode */ = {
 			isa = PBXGroup;
 			children = (
+				CE1292492089DB1B00F3EDF0 /* UIProgressView.swift */,
 				CE767D5C2088D3D600D7F137 /* ScaledHeightImageVIew.swift */,
 				CE4EB99C207C9B06007CEBE3 /* BorderView.swift */,
 				CE6711E0204594E3005B706E /* RoundBtn.swift */,
@@ -221,6 +226,7 @@
 				CEA579352048490200B38C93 /* SignupformTableView.swift */,
 				CE5D48172049887F003AF5EC /* HomeTableViewController.swift */,
 				CE86DB8F206CC81D00CA2D1B /* PopupViewController.swift */,
+				CE1292472089CBBA00F3EDF0 /* RatingPopupViewController.swift */,
 				CE71ADC0207CC56000D90FB4 /* MotherMilestoneUIViewController.swift */,
 				CE80E1D8208727C80084A7C0 /* AddKidViewController.swift */,
 			);
@@ -480,6 +486,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -487,6 +494,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +513,7 @@
 				CE18B48A2086261500C8181D /* DetailViewController.swift in Sources */,
 				CE86DB90206CC81D00CA2D1B /* PopupViewController.swift in Sources */,
 				CE767D5D2088D3D600D7F137 /* ScaledHeightImageVIew.swift in Sources */,
+				CE1292482089CBBA00F3EDF0 /* RatingPopupViewController.swift in Sources */,
 				CE71ADC1207CC56000D90FB4 /* MotherMilestoneUIViewController.swift in Sources */,
 				CE668FF42046D3C9001A557E /* SignupViewController.swift in Sources */,
 				CEA579362048490200B38C93 /* SignupformTableView.swift in Sources */,
@@ -521,6 +530,7 @@
 				CEA579322047E60300B38C93 /* RoundImage.swift in Sources */,
 				CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */,
 				CE22B9BB2080D86C000FB81E /* DataCollectionViewCell.swift in Sources */,
+				CE12924A2089DB1C00F3EDF0 /* UIProgressView.swift in Sources */,
 				CE55EE8320514DD500AA752D /* MotherMenuController.swift in Sources */,
 				CE767D572088860700D7F137 /* KidsTableViewController.swift in Sources */,
 			);
