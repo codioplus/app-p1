@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+import SideMenu
 class HomeTableViewController: UITableViewController {
 
+    let functions = Functions()
+    
+    
     @IBOutlet weak var milestoneMainLabel: UILabel!
     @IBOutlet weak var milestoneDescLabel: UILabel!
     @IBOutlet weak var tipsFor1: UILabel!
@@ -26,7 +29,7 @@ class HomeTableViewController: UITableViewController {
 override func viewDidLoad() {
     
 super.viewDidLoad()
-
+functions.menuRight(controller: self)
 self.title = NSLocalizedString("home", comment: "Home")
 
 milestoneMainLabel.text = NSLocalizedString("milestoneMainLabel", comment: "Milestone")
@@ -59,5 +62,14 @@ feedingTips.text = NSLocalizedString("feedingTips", comment: "Feeding")
         
         
     }
+    
+    @IBAction func openRightMenu(_ sender: UIBarButtonItem) {
+        
+        present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+        
+    }
+
+    
+    
     
 }

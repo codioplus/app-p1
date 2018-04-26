@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE1292482089CBBA00F3EDF0 /* RatingPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1292472089CBBA00F3EDF0 /* RatingPopupViewController.swift */; };
-		CE12924A2089DB1C00F3EDF0 /* UIProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1292492089DB1B00F3EDF0 /* UIProgressView.swift */; };
 		CE18B48020860DB900C8181D /* ic_date_picker.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47B20860DB800C8181D /* ic_date_picker.png */; };
 		CE18B48120860DB900C8181D /* ic_heart_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47C20860DB800C8181D /* ic_heart_off.png */; };
 		CE18B48220860DB900C8181D /* ic_menu_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CE18B47D20860DB800C8181D /* ic_menu_profile.png */; };
@@ -18,6 +17,10 @@
 		CE18B48A2086261500C8181D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18B4892086261500C8181D /* DetailViewController.swift */; };
 		CE22B9BB2080D86C000FB81E /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B9BA2080D86B000FB81E /* DataCollectionViewCell.swift */; };
 		CE2B8A51206CF30600B40EE6 /* MIBlurPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA745AF206CDD1F0076C5AD /* MIBlurPopup.swift */; };
+		CE4D9FE120904F5300433E46 /* MotherMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D9FE020904F5300433E46 /* MotherMenuViewController.swift */; };
+		CE4D9FE5209052EB00433E46 /* UIProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D9FE4209052EB00433E46 /* UIProgressView.swift */; };
+		CE4D9FE720905A6F00433E46 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D9FE620905A6F00433E46 /* Functions.swift */; };
+		CE4D9FEA2090A52500433E46 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D9FE92090A52500433E46 /* Country.swift */; };
 		CE4EB99D207C9B06007CEBE3 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EB99C207C9B06007CEBE3 /* BorderView.swift */; };
 		CE4EB9A8207C9E30007CEBE3 /* vc_notif_injection.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB99E207C9E2E007CEBE3 /* vc_notif_injection.pdf */; };
 		CE4EB9A9207C9E30007CEBE3 /* vc_menu_favorite.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE4EB99F207C9E2F007CEBE3 /* vc_menu_favorite.pdf */; };
@@ -77,7 +80,6 @@
 		7B78442DC245481BB1865237 /* Pods-Nestle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nestle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nestle/Pods-Nestle.release.xcconfig"; sourceTree = "<group>"; };
 		85A6307B08C93E8EBEDACC8F /* Pods-Nestle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nestle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nestle/Pods-Nestle.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1292472089CBBA00F3EDF0 /* RatingPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPopupViewController.swift; sourceTree = "<group>"; };
-		CE1292492089DB1B00F3EDF0 /* UIProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIProgressView.swift; path = /Users/user/Desktop/nestle/Nestle/Nestle/Mycode/UIProgressView.swift; sourceTree = "<absolute>"; };
 		CE18B47B20860DB800C8181D /* ic_date_picker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_date_picker.png; sourceTree = "<group>"; };
 		CE18B47C20860DB800C8181D /* ic_heart_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_heart_off.png; sourceTree = "<group>"; };
 		CE18B47D20860DB800C8181D /* ic_menu_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu_profile.png; sourceTree = "<group>"; };
@@ -86,6 +88,10 @@
 		CE18B487208616B800C8181D /* milestone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milestone1.png; sourceTree = "<group>"; };
 		CE18B4892086261500C8181D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE22B9BA2080D86B000FB81E /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataCollectionViewCell.swift; path = /Users/user/Desktop/nestle/Nestle/Nestle/Mother/DataCollectionViewCell.swift; sourceTree = "<absolute>"; };
+		CE4D9FE020904F5300433E46 /* MotherMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherMenuViewController.swift; sourceTree = "<group>"; };
+		CE4D9FE4209052EB00433E46 /* UIProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressView.swift; sourceTree = "<group>"; };
+		CE4D9FE620905A6F00433E46 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		CE4D9FE92090A52500433E46 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		CE4EB99C207C9B06007CEBE3 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		CE4EB99E207C9E2E007CEBE3 /* vc_notif_injection.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_notif_injection.pdf; path = Nestle/images/pdf/vc_notif_injection.pdf; sourceTree = SOURCE_ROOT; };
 		CE4EB99F207C9E2F007CEBE3 /* vc_menu_favorite.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = vc_menu_favorite.pdf; path = Nestle/images/pdf/vc_menu_favorite.pdf; sourceTree = SOURCE_ROOT; };
@@ -180,6 +186,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE4D9FDD20904E5700433E46 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		CE4D9FE82090A4F000433E46 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D9FE92090A52500433E46 /* Country.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		CE5CFCDA205131B2008AD351 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +221,7 @@
 		CE6711D820459388005B706E /* Mycode */ = {
 			isa = PBXGroup;
 			children = (
-				CE1292492089DB1B00F3EDF0 /* UIProgressView.swift */,
+				CE4D9FE4209052EB00433E46 /* UIProgressView.swift */,
 				CE767D5C2088D3D600D7F137 /* ScaledHeightImageVIew.swift */,
 				CE4EB99C207C9B06007CEBE3 /* BorderView.swift */,
 				CE6711E0204594E3005B706E /* RoundBtn.swift */,
@@ -208,6 +229,7 @@
 				CE6711F12045C4A9005B706E /* TextfieldBorderBottom.swift */,
 				CEA579312047E60300B38C93 /* RoundImage.swift */,
 				CE4EB9B2207CAFB6007CEBE3 /* SelectedColor.swift */,
+				CE4D9FE620905A6F00433E46 /* Functions.swift */,
 			);
 			path = Mycode;
 			sourceTree = "<group>";
@@ -229,6 +251,7 @@
 				CE1292472089CBBA00F3EDF0 /* RatingPopupViewController.swift */,
 				CE71ADC0207CC56000D90FB4 /* MotherMilestoneUIViewController.swift */,
 				CE80E1D8208727C80084A7C0 /* AddKidViewController.swift */,
+				CE4D9FE020904F5300433E46 /* MotherMenuViewController.swift */,
 			);
 			path = Mother;
 			sourceTree = "<group>";
@@ -318,6 +341,8 @@
 		CEE324AD20456F8500167EE6 /* Nestle */ = {
 			isa = PBXGroup;
 			children = (
+				CE4D9FE82090A4F000433E46 /* models */,
+				CE4D9FDD20904E5700433E46 /* ext */,
 				CE66F7F8207E4F2A001BC249 /* pic */,
 				CEA745AE206CDD1F0076C5AD /* MIBlurPopup */,
 				CE5CFCDA205131B2008AD351 /* Menu */,
@@ -514,6 +539,7 @@
 				CE86DB90206CC81D00CA2D1B /* PopupViewController.swift in Sources */,
 				CE767D5D2088D3D600D7F137 /* ScaledHeightImageVIew.swift in Sources */,
 				CE1292482089CBBA00F3EDF0 /* RatingPopupViewController.swift in Sources */,
+				CE4D9FE720905A6F00433E46 /* Functions.swift in Sources */,
 				CE71ADC1207CC56000D90FB4 /* MotherMilestoneUIViewController.swift in Sources */,
 				CE668FF42046D3C9001A557E /* SignupViewController.swift in Sources */,
 				CEA579362048490200B38C93 /* SignupformTableView.swift in Sources */,
@@ -524,13 +550,15 @@
 				CE4EB99D207C9B06007CEBE3 /* BorderView.swift in Sources */,
 				CE6711E3204596BD005B706E /* RoundView.swift in Sources */,
 				CE6711E1204594E3005B706E /* RoundBtn.swift in Sources */,
+				CE4D9FEA2090A52500433E46 /* Country.swift in Sources */,
 				CE6711F22045C4A9005B706E /* TextfieldBorderBottom.swift in Sources */,
 				CE5D481820498880003AF5EC /* HomeTableViewController.swift in Sources */,
 				CE4EB9B3207CAFB6007CEBE3 /* SelectedColor.swift in Sources */,
 				CEA579322047E60300B38C93 /* RoundImage.swift in Sources */,
+				CE4D9FE5209052EB00433E46 /* UIProgressView.swift in Sources */,
+				CE4D9FE120904F5300433E46 /* MotherMenuViewController.swift in Sources */,
 				CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */,
 				CE22B9BB2080D86C000FB81E /* DataCollectionViewCell.swift in Sources */,
-				CE12924A2089DB1C00F3EDF0 /* UIProgressView.swift in Sources */,
 				CE55EE8320514DD500AA752D /* MotherMenuController.swift in Sources */,
 				CE767D572088860700D7F137 /* KidsTableViewController.swift in Sources */,
 			);

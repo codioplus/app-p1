@@ -7,21 +7,14 @@
 
 import UIKit
 import SideMenu
+
+
 class KidsTableViewController: UITableViewController {
-
-
-
-    
+let functions = Functions()
     override func viewDidLoad() {
         super.viewDidLoad()
-self.navigationItem.setHidesBackButton(true, animated:true);
         
-        
-        let menuRightNavigationController = storyboard!.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
-        SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
-        
-        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+       functions.menuRight(controller: self)
         
         
         // Uncomment the following line to preserve selection between presentations

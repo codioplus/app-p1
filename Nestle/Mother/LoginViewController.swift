@@ -13,6 +13,9 @@ import SwiftKeychainWrapper
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    let functions = Functions()
+    
+    
     @IBOutlet weak var usernameField: TextfieldBorderBottom!
     @IBOutlet weak var passwordField: TextfieldBorderBottom!
     @IBOutlet weak var notUserText: UILabel!
@@ -24,6 +27,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
     
     override func viewDidLoad() {
+        
+        
+        if let saved_token : String = KeychainWrapper.standard.string(forKey: "token"){
+            print(saved_token)
+            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let Dvc = Storyboard.instantiateViewController(withIdentifier: "KidsTableViewController") as! KidsTableViewController
+            
+            self.navigationController?.pushViewController(Dvc, animated: true)
+            
+        }
+        
+        
+        
+        
         super.viewDidLoad()
      usernameField.delegate = self;
      passwordField.delegate = self;
@@ -61,11 +78,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registerNewAccountButtonTapped(_ sender: Any) {
-       
-        let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+//       
+//        let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+//        
+//        self.present(registerViewController, animated:true)
+//    
         
-        self.present(registerViewController, animated:true)
-    
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let Dvc = Storyboard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+        
+        self.navigationController?.pushViewController(Dvc, animated: true)
+        
+        
     }
     
     @IBAction func signInTappedBtn(_ sender: Any) {
@@ -102,11 +126,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         view.addSubview(myActivityIndicator)
         
-        
-        //Send HTTP Request to perform Sign in
-        let myUrl = URL(string: "http://cre8mania.net/projects/2018/nestleapp/dev/app-api/user/login")
 
+       
+       
         
+        
+        let myUrl = URL(string: functions.apiLink()+"app-api/user/login")
         var request = URLRequest(url:myUrl!)
         
         request.httpMethod = "POST"// Compose a query string
@@ -127,73 +152,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             self.removeActivityIndicator(activityIndicator: myActivityIndicator)
             
-            if let httpResponse = response as? HTTPURLResponse{
-
-                print ("Status Code: \(httpResponse.statusCode)")
-                
-                
-                let headers: HTTPHeaders = [
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                ]
-                
-                let parameters: Parameters = [:]
-                
-                let url = "http://cre8mania.net/projects/2018/nestleapp/dev/app-api/user/token"
-                
-                Alamofire.request(url, method:.post, parameters:parameters, headers:headers).responseJSON { response in
-                    switch response.result {
-                    case .success:
-                        //debugPrint(response)
-                        if let result = response.result.value{
-                            
-                            let json = JSON(result)
-                            print(json["token"])
-                         self.tok = "\(json["token"])"
-                        }
-                        
-                      //  tok = response.result.value
-                    case .failure(let error):
-                        print(error)
-                    }
-                    
-                }
-                
-            }
-
             if error != nil
             {
                 self.displayMessage(userMessage: "Could not successfully perform this request. Please try again later")
                 print("error=\(String(describing: error))")
                 return
             }
- 
+            
+            
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 401{
+                    
+                    self.displayMessage(userMessage: "Validation failed")
+                    print("Validation failed")
+                    return
+                }
+            }
             
             //Let's convert response sent from a server side code to a NSDictionary object:
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
+                let swiftjson = JSON(parseJSON)
                     
-//                    if parseJSON["errorMessageKey"] != nil
-//                    {
-//                        self.displayMessage(userMessage: parseJSON["errorMessage"] as! String)
-//                        return
-//                    }
-                    // Now we can access value of First Name by its key
-                    let accessToken = parseJSON["token"] as? String
-                    //let userId = parseJSON["user"]["uid"] as? String
+                    
+                    let accessToken = swiftjson["token"].string
+                    let userId = swiftjson["user"]["uid"].string
+                    
                     //print("Access token: \(String(describing: accessToken!))")
                     
-//                    let saveAccesssToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
-//                    let saveUserId: Bool = KeychainWrapper.standard.set(userId!, forKey: "userId")
-//
-//                    print("The access token save result: \(saveAccesssToken)")
-//                    print("The userId save result \(saveUserId)")
+                    let saveAccesssToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "token")
+                    let saveUserId: Bool = KeychainWrapper.standard.set(userId!, forKey: "uid")
                     
-                    print(parseJSON)
-                    
-                    
+                    print("The access token save result: \(saveAccesssToken)")
+                    print("The userId save result \(saveUserId)")
                     
                     if (accessToken?.isEmpty)!
                     {
@@ -204,10 +197,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     DispatchQueue.main.async
                         {
-//                            let homePage = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
-//                            let appDelegate = UIApplication.shared.delegate
-//                            appDelegate?.window??.rootViewController = homePage
-                    }
+                
+                            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let Dvc = Storyboard.instantiateViewController(withIdentifier: "KidsTableViewController") as! KidsTableViewController
+                            
+                            self.navigationController?.pushViewController(Dvc, animated: true)
+                    
+                       }
                     
                     
                 } else {
@@ -229,38 +225,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
         task.resume()
-        
-        
+
         
     }
+
     
-    
-    
-    
-    @IBAction func logout(_ sender: Any) {
-        
-        
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-            "X-CSRF-Token": tok
-        ]
-        
-        let parameters: Parameters = [:]
-        
-        let url = "http://cre8mania.net/projects/2018/nestleapp/dev/app-api/user/logout"
-        
-        Alamofire.request(url, method:.post, parameters:parameters, headers:headers).responseJSON { response in
-            switch response.result {
-            case .success:
-                debugPrint(response)
-                
-            case .failure(let error):
-                print(error)
-            }
-            
-        }
-    }
+//    @IBAction func logout(_ sender: Any) {
+//        
+//        
+//        let headers: HTTPHeaders = [
+//            "Content-Type": "application/json",
+//            "Accept": "application/json",
+//            "X-CSRF-Token": "Tw-uT4vVymr1oDluyuyeI3-wYL6n6ol-u86RNv1NeEs"
+//        ]
+//        
+//        let parameters: Parameters = [:]
+//        
+//        let url = "http://cre8mania.net/projects/2018/nestleapp/dev/app-api/user/logout"
+//        
+//        Alamofire.request(url, method:.post, parameters:parameters, headers:headers).responseJSON { response in
+//            switch response.result {
+//            case .success:
+//              print(response.result)
+//                
+//            case .failure(let error):
+//                print(error)
+//            }
+//            
+//        }
+//    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -272,6 +265,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+
+    
+    func removeActivityIndicator(activityIndicator: UIActivityIndicatorView)
+    {
+        DispatchQueue.main.async
+            {
+                activityIndicator.stopAnimating()
+                activityIndicator.removeFromSuperview()
+        }
+    }
+    
+    
     
     
     func displayMessage(userMessage:String) -> Void {
@@ -292,14 +298,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func removeActivityIndicator(activityIndicator: UIActivityIndicatorView)
-    {
-        DispatchQueue.main.async
-            {
-                activityIndicator.stopAnimating()
-                activityIndicator.removeFromSuperview()
-        }
-    }
     
-    
+//    func token() {
+//
+//        let headers: HTTPHeaders = [
+//            "Content-Type": "application/json",
+//            "Accept": "application/json"
+//        ]
+//
+//        let parameters: Parameters = [:]
+//
+//        let url = functions.apiLink()+"app-api/user/token"
+//
+//        Alamofire.request(url, method:.post, parameters:parameters,headers:headers).responseJSON{response in
+//
+//                switch response.result {
+//
+//                case .success:
+//
+//                    if let result = response.result.value{
+//
+//                        let json = JSON(result)
+//                        print(json)
+//
+//                    }
+//
+//                case .failure(let error):
+//                    print(error)
+//            }
+//
+//            }
+//    }
 }
+    
+    
+
