@@ -99,11 +99,21 @@ class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPicker
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return  self.countries[row]["name_en"] as? String
+        if functions.lang() == "ar"{
+        return self.countries[row]["name_ar"] as? String
+        }else{
+         return self.countries[row]["name_en"] as? String
+        }
+     // return self.countries[row]["name_en"] as? String
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if functions.lang() == "ar"{
+        countryField.text = self.countries[row]["name_ar"] as? String
+        }else{
         countryField.text = self.countries[row]["name_en"] as? String
+        }
         countryField.resignFirstResponder()
     }
     

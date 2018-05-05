@@ -69,6 +69,7 @@
 		CEA5792E2047CEEA00B38C93 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE6711F02045A449005B706E /* Gotham-Medium.otf */; };
 		CEA579322047E60300B38C93 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA579312047E60300B38C93 /* RoundImage.swift */; };
 		CEA579362048490200B38C93 /* SignupformTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA579352048490200B38C93 /* SignupformTableView.swift */; };
+		CEB267ED209CA37900BB8CEE /* Kids.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB267EC209CA37800BB8CEE /* Kids.swift */; };
 		CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE324AE20456F8500167EE6 /* AppDelegate.swift */; };
 		CEE324B420456F8500167EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B220456F8500167EE6 /* Main.storyboard */; };
 		CEE324B620456F8500167EE6 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE324B520456F8500167EE6 /* image.xcassets */; };
@@ -142,6 +143,7 @@
 		CEA579312047E60300B38C93 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		CEA579352048490200B38C93 /* SignupformTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupformTableView.swift; sourceTree = "<group>"; };
 		CEA745AF206CDD1F0076C5AD /* MIBlurPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBlurPopup.swift; sourceTree = "<group>"; };
+		CEB267EC209CA37800BB8CEE /* Kids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids.swift; sourceTree = "<group>"; };
 		CEE324AB20456F8500167EE6 /* Nestle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nestle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE324AE20456F8500167EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE324B320456F8500167EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4D9FE92090A52500433E46 /* Country.swift */,
+				CEB267EC209CA37800BB8CEE /* Kids.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				CE4D9FE5209052EB00433E46 /* UIProgressView.swift in Sources */,
 				CE4D9FE120904F5300433E46 /* MotherMenuViewController.swift in Sources */,
 				CEE324AF20456F8500167EE6 /* AppDelegate.swift in Sources */,
+				CEB267ED209CA37900BB8CEE /* Kids.swift in Sources */,
 				CE22B9BB2080D86C000FB81E /* DataCollectionViewCell.swift in Sources */,
 				CE55EE8320514DD500AA752D /* MotherMenuController.swift in Sources */,
 				CE767D572088860700D7F137 /* KidsTableViewController.swift in Sources */,

@@ -179,11 +179,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     let accessToken = swiftjson["token"].string
                     let userId = swiftjson["user"]["uid"].string
-                    
-                    //print("Access token: \(String(describing: accessToken!))")
-                    
+                    //    print(swiftjson)
+                   // print("yala")
+                  //  print(swiftjson["user"]["field_doctor_name"]["und"].arrayValue[0]["value"])
+                 //   print(swiftjson["user"]["field_doctor_name"]["und"][0]["value"])
+                   // return
                     let saveAccesssToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "token")
                     let saveUserId: Bool = KeychainWrapper.standard.set(userId!, forKey: "uid")
+                    
+//                    let account_type: Bool = KeychainWrapper.standard.set(5, forKey: "account_type")
+//                    let doctor_id: Bool = KeychainWrapper.standard.set(json["tid"].int!, forKey: "doctor_id")
+//                    let saveUserId: Bool = KeychainWrapper.standard.set(json["uid"].int!, forKey: "uid")
+//                    let doctor_name: Bool = KeychainWrapper.standard.set(json["vale"].string!, forKey: "doctor_name")
+
+
                     
                     print("The access token save result: \(saveAccesssToken)")
                     print("The userId save result \(saveUserId)")

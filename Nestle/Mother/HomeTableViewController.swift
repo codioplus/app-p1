@@ -29,7 +29,7 @@ class HomeTableViewController: UITableViewController {
 override func viewDidLoad() {
     
 super.viewDidLoad()
-functions.menuRight(controller: self)
+//functions.menuRight(controller: self)
 self.title = NSLocalizedString("home", comment: "Home")
 
 milestoneMainLabel.text = NSLocalizedString("milestoneMainLabel", comment: "Milestone")

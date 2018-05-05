@@ -7,14 +7,52 @@
 
 import UIKit
 import SideMenu
-
+import Alamofire
 
 class KidsTableViewController: UITableViewController {
 let functions = Functions()
+var kids = [Kids]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
        functions.menuRight(controller: self)
+        
+        let URL_GET_DATA = functions.apiLink()+"get_mom_kids.json/59"
+        
+        Alamofire.request(URL_GET_DATA).responseJSON { response in
+            
+            //getting json
+            if let json = response.result.value {
+                
+                //converting json to NSArray
+                let kidsArray : NSArray  = json as! NSArray
+                
+                //traversing through all elements of the array
+                for i in 0..<kidsArray.count{
+                    
+                    //adding hero values to the hero list
+                    self.kids.append(Kids(
+                        title: (kidsArray[i] as AnyObject).value(forKey: "title") as? String,
+                         dob: (kidsArray[i] as AnyObject).value(forKey: "dob") as? String,
+                         profile_image: (kidsArray[i] as AnyObject).value(forKey: "profile_image") as? String,
+                        child_id: (kidsArray[i] as AnyObject).value(forKey: "child_id") as? Int
+                       
+                    ))
+                    
+                }
+
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+           self.tableView.reloadData()
+        
+      //  self.tableViewHeroes.reloadData()
+        
+        
+        
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -38,7 +76,7 @@ let functions = Functions()
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return kids.count
     }
 
     
@@ -51,11 +89,65 @@ let functions = Functions()
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "kids", for: indexPath) as! KidsTableViewCell
+        let kid : Kids = kids[indexPath.row]
+        print(kid.dob)
+        if let imageUrlString = kid.profile_image{
+        
+        if let imageUrl = URL(string: imageUrlString){
+        do{
+        let imageData = try! Data(contentsOf: imageUrl)
+        cell.kidImage.image = UIImage(data: imageData)
+        }catch let err{
+            
+            print("Error  : \(err)")
+            }
+        }
+        }
+        
+    else{
+    
+          cell.kidImage.image = UIImage(named: "no_profile.png")
+            
+        }
+        cell.kidName.text = kid.title
+        if let dob = kid.dob{
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-mm-dd" //Your date format
+            
+            let dateFormat = dateFormatter.date(from: dob)
+            if dateFormat != nil{
+   
+               // let dateCurrent = Date()
+       
+                let formatedStartDate = dateFormatter.date(from: dob)
+                let currentDate = Date()
+              
+                let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .month, .year])
+                //components.timeZone = TimeZone.current
+                let differenceOfDate = Calendar.current.dateComponents(components, from: formatedStartDate!, to: currentDate)
+                
+                print (differenceOfDate)
+                
 
-        cell.kidImage.image = UIImage(named: "profile_image.png")
-        cell.kidName.text = "Ahmad"
-        cell.kidAge.text = "13 months"
+                
+                let months = differenceOfDate.month
+                if months == 1{
+                    cell.kidAge.text = "\(months ?? 0) month"
+                }else{
+                    
+                cell.kidAge.text = "\(months ?? 0) months"
+                }
+            }
+            
+            
+            
+            
+        }else{
+             cell.kidAge.text = "ii"
+        }
         return cell
     }
   

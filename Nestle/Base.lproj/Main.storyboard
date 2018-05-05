@@ -27,7 +27,7 @@
         <!--Login View Controller-->
         <scene sceneID="obt-xh-s4b">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Edq-wx-XAN" customClass="LoginViewController" customModule="Nestle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Edq-wx-XAN" customClass="LoginViewController" customModule="Nestle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZEu-Mf-PKp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1708,11 +1708,11 @@ CA
                                                     <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="xy@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub8-Uc-7A1">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub8-Uc-7A1">
                                                     <rect key="frame" x="16" y="54" width="188" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1832,7 +1832,7 @@ CA
                                                     <rect key="frame" x="16" y="54" width="188" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1862,7 +1862,7 @@ CA
                                                     <rect key="frame" x="16" y="54" width="188" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -2323,7 +2323,7 @@ CA
                                         <rect key="frame" x="15" y="0.0" width="218" height="20"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="753" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-9E-p1b">
-                                                <rect key="frame" x="48" y="9.5" width="170" height="1"/>
+                                                <rect key="frame" x="48" y="10" width="170" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="YNq-y8-SRr"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="tZT-Wt-NQ8"/>
@@ -2374,7 +2374,7 @@ CA
                                         <rect key="frame" x="15" y="40" width="218" height="20"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="753" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Urw-Il-cuP">
-                                                <rect key="frame" x="48" y="9.5" width="170" height="1"/>
+                                                <rect key="frame" x="48" y="10" width="170" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="5UJ-lT-YCd"/>
                                                     <constraint firstAttribute="height" constant="20" id="Szl-TO-30b"/>
@@ -2437,7 +2437,7 @@ CA
                                         <rect key="frame" x="15" y="80" width="218" height="20"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="753" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uT6-VR-Zx1">
-                                                <rect key="frame" x="48" y="9.5" width="170" height="1"/>
+                                                <rect key="frame" x="48" y="10" width="170" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="B89-mw-vCu"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="IFD-jl-X4E"/>
@@ -2500,7 +2500,7 @@ CA
                                         <rect key="frame" x="15" y="120" width="218" height="20"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="753" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I73-EX-gE2">
-                                                <rect key="frame" x="48" y="9.5" width="170" height="1"/>
+                                                <rect key="frame" x="48" y="10" width="170" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="7M7-ut-5mM"/>
                                                     <constraint firstAttribute="height" constant="20" id="DJm-79-6Hz"/>
@@ -2563,7 +2563,7 @@ CA
                                         <rect key="frame" x="15" y="160" width="218" height="20"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="753" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VWh-PK-mfG">
-                                                <rect key="frame" x="48" y="9.5" width="170" height="1"/>
+                                                <rect key="frame" x="48" y="10" width="170" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="1X7-Bl-IWd"/>
                                                     <constraint firstAttribute="height" constant="20" id="BNF-cs-GQT"/>
