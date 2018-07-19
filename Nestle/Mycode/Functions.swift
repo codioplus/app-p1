@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 import SideMenu
-
+import Alamofire
+import SwiftyJSON
 class Functions{
 
+
+    
+    
+    
 func isValidEmail(email:String?) -> Bool {
     
     guard email != nil else { return false }
@@ -25,9 +30,9 @@ func isValidEmail(email:String?) -> Bool {
 
     func lang() -> String{
         var lang = "en"
-        if let langCode = Locale.current.languageCode{
-            lang = langCode
-        }
+      
+            lang = LanguageManger.shared.currentLanguage.rawValue
+        
         return lang
     }
     
@@ -133,19 +138,110 @@ func isValidPassword(testStr:String?) -> Bool {
     controller.navigationItem.setHidesBackButton(true, animated:true);
         
    let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if self.lang() == "ar"{
+      
     let menuRightNavigationController = Storyboard.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
-    SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
-    
+    SideMenuManager.default.menuLeftNavigationController = menuRightNavigationController
+        }else{
+            
+            let menuRightNavigationController = Storyboard.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
+            SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
+            
+        }
+        
+   // SideMenuManager.default.menuWidth = 200
     SideMenuManager.default.menuAddPanGestureToPresent(toView: controller.navigationController!.navigationBar)
     SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: controller.navigationController!.view)
 
 }
     
-
+   
+    func accurateRound(value: Double) -> Int {
+        
+        let d : Double = value - Double(Int(value))
+        
+        if d < 0.5 {
+            return Int(value)
+        } else {
+            return Int(value) + 1
+        }
+    }
+    
     
 
-    
 
+func hexStringToUIColor (hex:String) -> UIColor {
+    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+    
+    if ((cString.count) != 6) {
+        return UIColor.gray
+    }
+    
+    var rgbValue:UInt32 = 0
+    Scanner(string: cString).scanHexInt32(&rgbValue)
+    
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
 }
 
+    
+    
+    func numberOfSections(in tableView: UITableView, data : Int)
+    {
+        let noDataLabel : UILabel!
+        
+        if data > 0
+        {
 
+            tableView.backgroundView = nil
+        }
+        else
+        {
+           
+            noDataLabel   = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text          = ("no_data_available").localiz()
+            noDataLabel.textColor     = UIColor.black
+            noDataLabel.textAlignment = .center
+            tableView.separatorStyle  = .none
+            tableView.backgroundView  = noDataLabel
+            noDataLabel.isHidden = false
+        }
+      //  return numOfSections
+    }
+   
+    func numberOfSectionsCollection(in collectionView: UICollectionView, data : Int)
+    {
+        let noDataLabel : UILabel!
+        
+        if data > 0
+        {
+            
+            collectionView.backgroundView = nil
+        }
+        else
+        {
+            
+            noDataLabel   = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
+            noDataLabel.text          = ("no_data_available").localiz()
+            noDataLabel.textColor     = UIColor.black
+            noDataLabel.textAlignment = .center
+          //  tableView.separatorStyle  = .none
+            collectionView.backgroundView  = noDataLabel
+            noDataLabel.isHidden = false
+        }
+        //  return numOfSections
+    }
+    
+
+    
+    
+}

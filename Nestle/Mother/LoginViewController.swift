@@ -5,7 +5,7 @@
 //  Created by User on 2/27/18.
 //  Copyright © 2018 Nestle. All rights reserved.
 //
-
+import Darwin
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -14,46 +14,61 @@ import SwiftKeychainWrapper
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     let functions = Functions()
-    
+    var selectedLanguage:Languages?
     
     @IBOutlet weak var usernameField: TextfieldBorderBottom!
     @IBOutlet weak var passwordField: TextfieldBorderBottom!
     @IBOutlet weak var notUserText: UILabel!
     @IBOutlet weak var signUpBtnText: UIButton!
     @IBOutlet weak var loginBtnText: RoundBtn!
+    @IBOutlet weak var ar: UILabel!
+    @IBOutlet weak var en: UILabel!
+    @IBOutlet weak var `switch`: UISwitch!
+    var lang : String?
+    
     
     var tok:String = ""
     let signUpBtnTextAttributes : [NSAttributedStringKey: Any] = [
         NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
     
     override func viewDidLoad() {
+  
+    super.viewDidLoad()
+
+    usernameField.textAlignment  =  LanguageManger.shared.isRightToLeft ? .right : .left
+    passwordField.textAlignment  =  LanguageManger.shared.isRightToLeft ? .right : .left
+        self.ar.semanticContentAttribute = .forceLeftToRight
+        self.en.semanticContentAttribute = .forceLeftToRight
+        self.`switch`.semanticContentAttribute = .forceLeftToRight
+     usernameField.delegate = self;
+     passwordField.delegate = self;
         
         
-        if let saved_token : String = KeychainWrapper.standard.string(forKey: "token"){
-            print(saved_token)
-            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let Dvc = Storyboard.instantiateViewController(withIdentifier: "KidsTableViewController") as! KidsTableViewController
+        if let lg = UserDefaults.standard.string(forKey: "lang"){
             
-            self.navigationController?.pushViewController(Dvc, animated: true)
+            if lg == "ar"{
+                self.switch.isOn = true
+                   self.en.text = "عر"
+                self.ar.text = "EN"
+            }else{
+                self.switch.isOn = false
+                self.ar.text = "عر"
+                self.en.text = "EN"
+            }
             
         }
         
         
+    usernameField.placeholder = ("placeholderUsernameField").localiz()
         
-        
-        super.viewDidLoad()
-     usernameField.delegate = self;
-     passwordField.delegate = self;
-    usernameField.placeholder = NSLocalizedString("placeholderUsernameField", comment: "Username Field")
-        
-    passwordField.placeholder = NSLocalizedString("placeholderPasswordField", comment: "Password Field")
+    passwordField.placeholder = ("placeholderPasswordField").localiz()
   
-    notUserText.text = NSLocalizedString("notUserLabelText", comment: "Not a User")
+    notUserText.text = ("notUserLabelText").localiz()
    
-    loginBtnText.setTitle(NSLocalizedString("loginBtn", comment: "Login"), for: .normal)
+    loginBtnText.setTitle(("loginBtn").localiz(), for: .normal)
         
         
-    let attributeString = NSMutableAttributedString(string: NSLocalizedString("signUpBtnText", comment: "Sign up"),attributes: signUpBtnTextAttributes)
+    let attributeString = NSMutableAttributedString(string: ("signUpBtnText").localiz(),attributes: signUpBtnTextAttributes)
         signUpBtnText.setAttributedTitle(attributeString, for: .normal)
     
         
@@ -176,26 +191,81 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if let parseJSON = json {
                 let swiftjson = JSON(parseJSON)
                     
-                    
+                 //   print(swiftjson)
                     let accessToken = swiftjson["token"].string
                     let userId = swiftjson["user"]["uid"].string
-                    //    print(swiftjson)
+                    let mail = swiftjson["user"]["mail"].string
+                    let name = swiftjson["user"]["field_name"]["und"][0]["value"].string
+                    let profile_image = swiftjson["user"]["field_profile_image_user"]["und"][0]["value"].string
+                    let country = swiftjson["user"]["field_country_of_residence"]["und"][0]["tid"].string
+                    if swiftjson["user"]["field_account_type"]["und"].count > 0{
+                        
+                        print("accountType")
+                        
+                      
+                        
+                        let account: Bool = KeychainWrapper.standard.set(swiftjson["user"]["field_account_type"]["und"][0]["value"].string!, forKey: "accounttype")
+                        
+                        
+                        
+                        print("The account type save result \(account) \(swiftjson["user"]["field_account_type"]["und"][0]["value"].string!)")
+                        
+                        
+                    }
+                    
+                    
+                 //   print(swiftjson)
                    // print("yala")
                   //  print(swiftjson["user"]["field_doctor_name"]["und"].arrayValue[0]["value"])
                  //   print(swiftjson["user"]["field_doctor_name"]["und"][0]["value"])
-                   // return
+                  
                     let saveAccesssToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "token")
+                    
+                    
+                    UserDefaults.standard.set(accessToken!, forKey: "token")
+                    
+                     if let nm = name {
+                    KeychainWrapper.standard.set(nm, forKey: "name")
+                    }
+                    
+                    if let profileImage = profile_image {
+                    KeychainWrapper.standard.set(profileImage, forKey: "profile_image")
+                    }else{
+                     KeychainWrapper.standard.set("", forKey: "profile_image")
+                    }
+                    
+                    if let cn = country {
+                        KeychainWrapper.standard.set(cn, forKey: "country_id")
+                    }
+            
+                    
+                    
+                    KeychainWrapper.standard.set(mail!, forKey: "mail")
                     let saveUserId: Bool = KeychainWrapper.standard.set(userId!, forKey: "uid")
                     
-//                    let account_type: Bool = KeychainWrapper.standard.set(5, forKey: "account_type")
-//                    let doctor_id: Bool = KeychainWrapper.standard.set(json["tid"].int!, forKey: "doctor_id")
-//                    let saveUserId: Bool = KeychainWrapper.standard.set(json["uid"].int!, forKey: "uid")
-//                    let doctor_name: Bool = KeychainWrapper.standard.set(json["vale"].string!, forKey: "doctor_name")
-
+                    if swiftjson["user"]["field_doctor_code"]["und"].count > 0{
+                    if let field_doctor_code = swiftjson["user"]["field_doctor_code"]["und"].arrayValue[0]["uid"].string{
+          
+                        let doctor_id: Bool = KeychainWrapper.standard.set(field_doctor_code, forKey: "doctor_id")
+                        print("The doctor id save result \(doctor_id)")
+                        if swiftjson["user"]["field_doctor_name"]["und"].count > 0{
+                        if let doctor_name = swiftjson["user"]["field_doctor_name"]["und"].arrayValue[0]["value"].string{
+                            let doctor: Bool = KeychainWrapper.standard.set(doctor_name, forKey: "doctor_name")
+                            print("The doctor name save result \(doctor)")
+                        }
+                    }
+                    }
+                    }
 
                     
                     print("The access token save result: \(saveAccesssToken)")
                     print("The userId save result \(saveUserId)")
+                    
+                   
+
+                    
+                    
+                    
                     
                     if (accessToken?.isEmpty)!
                     {
@@ -207,10 +277,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async
                         {
                 
-                            let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let Dvc = Storyboard.instantiateViewController(withIdentifier: "KidsTableViewController") as! KidsTableViewController
+                            if swiftjson["user"]["field_account_type"]["und"].count > 0{
+                                if swiftjson["user"]["field_account_type"]["und"][0]["value"].string! == "4"{
+                                    let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let Dvc = Storyboard.instantiateViewController(withIdentifier: "HomeDoctorViewController") as! HomeDoctorViewController
+                                    
+                                    self.navigationController?.pushViewController(Dvc, animated: true)
+                                    
+                                }else{
+                                    
+                                    let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let Dvc = Storyboard.instantiateViewController(withIdentifier: "KidsTableViewController") as! KidsTableViewController
+                                    
+                                    self.navigationController?.pushViewController(Dvc, animated: true)
+                                    
+                                    
+                                }
+                            }
                             
-                            self.navigationController?.pushViewController(Dvc, animated: true)
+                            
+                            
+
                     
                        }
                     
@@ -238,6 +325,72 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
 
+    
+    @IBAction func `switch`(_ sender: UISwitch) {
+        
+        if(sender.isOn == true){
+            
+          
+          //  UIFont.overrideInitialize()
+           
+            selectedLanguage = .ar
+            
+         lang = "ar"
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            self.en.text = "عر"
+            self.ar.text = "EN"
+        }else{
+          //  UILabel.appearance().font = UIFont(name: "Gotham", size: UIFont.labelFontSize)
+            lang = "en"
+         selectedLanguage = .en
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            self.ar.text = "عر"
+            self.en.text = "EN"
+        }
+       // print("tffffooo")
+      //  print(lang)
+        UserDefaults.standard.set(lang!, forKey: "lang")
+        
+        // change the language
+        LanguageManger.shared.setLanguage(language: selectedLanguage!)
+
+//            let delegate = UIApplication.shared.delegate as! AppDelegate
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            delegate.window?.rootViewController = storyboard.instantiateInitialViewController()
+//
+//
+        
+ 
+        
+        DispatchQueue.main.async
+            {
+      
+            
+                    //    let delegate = UIApplication.shared.delegate as! AppDelegate
+                   //     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+                  //      delegate.window?.rootViewController = storyboard.instantiateInitialViewController()
+            
+            
+            let alertController = UIAlertController(title: ("attention").localiz(), message: ("restart").localiz(), preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: ("OK").localiz(), style: UIAlertActionStyle.cancel, handler: {
+                (action:UIAlertAction!) -> Void in
+                exit(0)
+              //  UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+            }))
+            
+            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+        }
+
+        
+    }
+    
+    
     
 //    @IBAction func logout(_ sender: Any) {
 //        

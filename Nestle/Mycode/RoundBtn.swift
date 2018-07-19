@@ -24,7 +24,7 @@ class RoundBtn: UIButton {
         }
     }
     
-    
+
      @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet {
             self.layer.borderColor = borderColor.cgColor

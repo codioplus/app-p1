@@ -2,18 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>cre8mania.net</key>
-			<string></string>
-		</dict>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>stepsApp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,9 +19,33 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>13</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>cre8mania.net</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>The app use the photo taken by your phone camera in your profile page and it only use as profile image for you or for your child</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app use the photo chosen from your photo library in your profile page and it only use as profile image for you or for your child</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gotham-Medium.otf</string>
+		<string>Tahoma.ttf</string>
+		<string>Tahoma_Bold.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -49,13 +65,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Gotham-Medium.otf</string>
-	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Necessary to use camera</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Necessary to use photo library</string>
 </dict>
 </plist>

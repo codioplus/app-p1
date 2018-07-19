@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SwiftKeychainWrapper
+import DLRadioButton
 
-class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
 
     @IBOutlet weak var nameLabelSignup: UILabel!
     @IBOutlet weak var emailLabelSignup: UILabel!
@@ -28,8 +29,19 @@ class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var countryField: UITextField!
     
+    @IBOutlet weak var and: UILabel!
+    @IBOutlet weak var radioBtn: DLRadioButton!
+    
+    @IBOutlet weak var privacy_btn: UIButton!
+    @IBOutlet weak var term_of_use: UIButton!
+    @IBOutlet weak var cookies: UIButton!
+    @IBOutlet weak var i_accept: UILabel!
+    
+    @IBOutlet weak var topTerm: NSLayoutConstraint!
     var pickerView = UIPickerView()
 
+
+    
     let functions = Functions()
     
     var countries : [[String : Any]] = []
@@ -39,47 +51,51 @@ class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPicker
 
      super.viewDidLoad()
         
-  
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        ]
+
         
-        let parameters: Parameters = [:]
+        self.i_accept.text = ("i_accept").localiz()
+        self.privacy_btn.setTitle(("privacy_btn").localiz(), for: .normal)
+        self.cookies.setTitle(("cookies").localiz(), for: .normal)
+        self.term_of_use.setTitle(("term_of_use").localiz(), for: .normal)
+        self.and.text = ("and").localiz()
         
-        let url = functions.apiLink()+"countries.json"
         
-        Alamofire.request(url, method:.post, parameters:parameters, headers:headers).responseJSON {response in
-            switch response.result {
-            case .success:
-
-                if let values = response.result.value  as! [[String: Any]]? {
-  
-                    self.countries = values
-
-            }
-            else{
-
-                        print("no data")
-                }
-
-
-            case .failure(let error):
-                print(error)
-
+      nameLabelSignup.text = ("nameLabelSignup").localiz()
+      emailLabelSignup.text = ("emailLabelSignup").localiz()
+      countryLabelSignup.text = ("countryLabelSignup").localiz()
+      contactLabelSignup.text = ("contactLabelSignup").localiz()
+      doctorCodeLabelSignup.text = ("doctorCodeLabelSignup").localiz()
+      passwordLabelSignup.text = ("passwordLabelSignup").localiz()
+      confirmPasswordLabelSignup.text = ("confirmPasswordLabelSignup").localiz()
+        
+        if functions.lang() == "ar"{
+            
+           topTerm.constant = 11
+            self.term_of_use.layoutIfNeeded()
+            
+            
+            nameField.textAlignment = .right
+            emailField.textAlignment = .right
+            contactField.textAlignment = .right
+            doctorcodeField.textAlignment = .right
+            confirmPasswordField.textAlignment = .right
+            passwordField.textAlignment = .right
+            countryField.textAlignment = .right
+            
+            
             
         }
-        }
- 
         
-      nameLabelSignup.text = NSLocalizedString("nameLabelSignup", comment: "Name (optional)")
-      emailLabelSignup.text = NSLocalizedString("emailLabelSignup", comment: "Email")
-      countryLabelSignup.text = NSLocalizedString("countryLabelSignup", comment: "Country of residence")
-      contactLabelSignup.text = NSLocalizedString("contactLabelSignup", comment: "Contact (optional)")
-      doctorCodeLabelSignup.text = NSLocalizedString("doctorCodeLabelSignup", comment: "Enter doctor code")
-      passwordLabelSignup.text = NSLocalizedString("passwordLabelSignup", comment: "Password")
-      confirmPasswordLabelSignup.text = NSLocalizedString("confirmPasswordLabelSignup", comment: "Confirm Password")
         
+
+        nameField.delegate = self
+        emailField.delegate = self
+        contactField.delegate = self
+        doctorcodeField.delegate = self
+        confirmPasswordField.delegate = self
+        passwordField.delegate = self
+        countryField.delegate = self
+
         
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -119,9 +135,7 @@ class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPicker
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-   
         self.view.endEditing(true)
-     
     }
     
     
@@ -130,9 +144,83 @@ class SignupformTableView: UITableViewController, UIPickerViewDelegate, UIPicker
         return false
     }
     
-//    func myMethod(){
-//        
-//        print ("qqq")
-//    }
+    func countriesList(){
+        
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            ]
+        
+        let parameters: Parameters = [:]
+        
+        let url = functions.apiLink()+"countries.json"
+        
+        Alamofire.request(url, method:.post, parameters:parameters, headers:headers).responseJSON {response in
+            switch response.result {
+            case .success:
+                
+                if let values = response.result.value  as! [[String: Any]]? {
+                    
+                    self.countries = values
+                    
+                }
+                else{
+                    
+                    print("no data")
+                }
+                
+                
+            case .failure(let error):
+                print(error)
+                
+                
+            }
+        
+    }
+    
+    
+    
 }
 
+  override  func viewWillAppear(_ animated: Bool) {
+     super.viewWillAppear(false)
+        countriesList()
+    }
+    
+    @IBAction func terms_use(_ sender: UIButton) {
+        
+        
+        
+        UserDefaults.standard.set("3", forKey: "termId")
+    
+            self.privacy_btn.sendActions(for: .touchUpInside)
+        
+    }
+    
+    
+    @IBAction func cookies_notice(_ sender: UIButton) {
+        
+        
+        UserDefaults.standard.set("1", forKey: "termId")
+ 
+        self.privacy_btn.sendActions(for: .touchUpInside)
+        
+    }
+    
+    
+    @IBAction func privacy_notice(_ sender: UIButton) {
+ 
+        
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let Dvc = Storyboard.instantiateViewController(withIdentifier: "TermsViewController") as! TermsViewController
+        
+        
+        
+        self.navigationController?.popToViewController(Dvc, animated: true)
+        
+    }
+    
+    
+    
+    
+}
